@@ -1,0 +1,47 @@
+body {
+    background-color: #A100004D;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #000000;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    background-color: #f9f9f9;
+    max-width: 80%;
+    margin: 0 auto 3em;
+    padding: 0 2em 2em; 
+}
+
+header {
+    margin: 0 -2em 0 -2em; /* Tar bort main-padding på sidorna */
+    padding: 0;
+}
+
+header img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #A10000;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+
+li{
+    line-height: 2em;
+}
+
+img {
+    max-width: 100%;
+}
