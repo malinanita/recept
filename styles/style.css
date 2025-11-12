@@ -1,47 +1,85 @@
 body {
-    background-color: #A100004D;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    color: #000000;
-    margin: 0;
-    padding: 0;
+  background-color: #A100004D;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  color: #000000;
+  margin: 0;
+  padding: 0;
 }
 
 main {
-    background-color: #f9f9f9;
-    max-width: 80%;
-    margin: 0 auto 3em;
-    padding: 0 2em 2em; 
+  background-color: #f9f9f9;
+  max-width: 80%;
+  margin: 0 auto 3em;
+  padding: 0 2em 2em; 
 }
 
 header {
-    margin: 0 -2em 0 -2em; /* Tar bort main-padding på sidorna */
-    padding: 0;
+  margin: 0 -2em 0 -2em; /* Flyttar ut headern så den täcker mainens sidpadding så bilden kan täcka hela main */
+  padding: 0;
 }
 
 header img {
-    display: block;
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: 300px;
+  object-fit: cover;       /* fyller ytan utan att förvrängas – beskär vid behov*/
+  object-position: center; /* centrerar beskärningen */
 }
 
 h1 {
-    font-size: 28px;
-    font-weight: 700;
-    color: #A10000;
+  font-size: 18px;
+  font-weight: 700;
+  color: #A10000;
+  margin: 1.75em 0 1em 0;
 }
 
 h2 {
-    font-size: 24px;
-    font-weight: 700;
+  font-size: 18px;
+  font-weight: 700;
 }
 
+#top-text{
+  background-color: #EBEBEB;
+  padding: 1em 1em;
+}
 
 li{
-    line-height: 2em;
+  line-height: 2em;
 }
 
-img {
-    max-width: 100%;
+.image-container {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  flex-wrap: wrap; /* tillåter att en bild bryts till nästa rad när den inte får plats */
+}
+
+.image-container img {
+  width: 48%;               /* varje bild tar upp ungefär halva bredden */
+  height: 250px;            /* fast höjd */
+  object-fit: cover;        /* fyller ytan utan att förvrängas – beskär vid behov*/
+  object-position: center;  /* centrerar beskärningen */
+}
+
+@media (max-width: 768px) {
+    main {
+      max-width: 100%;
+      padding: 0 1em 5em 1em;
+    }
+ 
+    .image-container {
+      flex-direction: column; /* staplar bilderna ovanpå varandra */
+      align-items: center;
+    }
+
+    .image-container img {
+      width: 100%;
+      height: auto;
+    }
+
+    header img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 9 / 10;     /* Stående bildformat */    }
 }
