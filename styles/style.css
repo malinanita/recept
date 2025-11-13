@@ -10,19 +10,19 @@ body {
 
 main {
   background-color: #f9f9f9;
-  max-width: 80%;
+  max-width: 800px;
   margin: 0 auto 3em;
-  padding: 0 2em 2em; 
+  padding: 0 2em 4em 2em; 
 }
 
 header {
-  margin: 0 -2em 0 -2em; /* Flyttar ut headern så den täcker mainens sidpadding så bilden kan täcka hela main */
+  margin: 0 -2em 0 -2em; /* Flyttar ut headern så den täcker mainens sidpadding - så bilden kan täcka hela main */
   padding: 0;
 }
 
 header img {
   width: 100%;
-  height: 300px;
+  height: 330px;
   object-fit: cover;       /* fyller ytan utan att förvrängas – beskär vid behov*/
   object-position: center; /* centrerar beskärningen */
 }
@@ -44,8 +44,17 @@ h2 {
   padding: 1em 1em;
 }
 
-li{
+ul, ol{
   line-height: 2em;
+  padding-left: 2em;
+}
+
+ul {
+  padding-left: 2em;
+}
+
+ol{
+  padding-left: 1.5em;
 }
 
 .image-container {
@@ -57,7 +66,7 @@ li{
 
 .image-container img {
   width: 48%;               /* varje bild tar upp ungefär halva bredden */
-  height: 250px;            /* fast höjd */
+  height: 310px;            /* fast höjd */
   object-fit: cover;        /* fyller ytan utan att förvrängas – beskär vid behov*/
   object-position: center;  /* centrerar beskärningen */
 }
@@ -65,7 +74,7 @@ li{
 @media (max-width: 768px) {
     main {
       max-width: 100%;
-      padding: 0 1em 5em 1em;
+      padding: 0 1em 4em 1em;
     }
  
     .image-container {
